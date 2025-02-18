@@ -11,6 +11,8 @@
 		60409E412D63B13B005430DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60409E402D63B13B005430DD /* ViewController.swift */; };
 		60409E462D63B13D005430DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60409E452D63B13D005430DD /* Assets.xcassets */; };
 		60409E492D63B13D005430DD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 60409E482D63B13D005430DD /* Base */; };
+		60E532722D64EB50006CFC38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E532712D64EB50006CFC38 /* NetworkService.swift */; };
+		60E532742D64EB7C006CFC38 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E532732D64EB7C006CFC38 /* QuoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		60409E452D63B13D005430DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60409E482D63B13D005430DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60409E4A2D63B13D005430DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60E532712D64EB50006CFC38 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		60E532732D64EB7C006CFC38 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		60409E3B2D63B13B005430DD /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				60E532702D64EB16006CFC38 /* NetworkService */,
 				60409E3C2D63B13B005430DD /* AppDelegate.swift */,
 				60409E402D63B13B005430DD /* ViewController.swift */,
 				60409E452D63B13D005430DD /* Assets.xcassets */,
@@ -59,6 +64,15 @@
 				60409E4A2D63B13D005430DD /* Info.plist */,
 			);
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		60E532702D64EB16006CFC38 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				60E532712D64EB50006CFC38 /* NetworkService.swift */,
+				60E532732D64EB7C006CFC38 /* QuoteModel.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				60409E412D63B13B005430DD /* ViewController.swift in Sources */,
+				60E532722D64EB50006CFC38 /* NetworkService.swift in Sources */,
+				60E532742D64EB7C006CFC38 /* QuoteModel.swift in Sources */,
 				60409E3D2D63B13B005430DD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
