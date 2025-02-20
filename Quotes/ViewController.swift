@@ -19,11 +19,19 @@ final class ViewController: UIViewController {
         return label
     }()
     
+    private lazy var categoryButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "square.split.2x2.fill"), for: .normal)
+        button.addTarget(self, action: #selector(categoryButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupConstraints()
-        fetchData()
+       // fetchData()
     }
 }
 
@@ -32,6 +40,7 @@ private extension ViewController {
     func setupView() {
         view.backgroundColor = .white
         view.addSubview(label)
+        view.addSubview(categoryButton)
     }
     
     func fetchData() {
@@ -51,7 +60,17 @@ private extension ViewController {
         NSLayoutConstraint.activate([
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            categoryButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            categoryButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            categoryButton.widthAnchor.constraint(equalToConstant: 40),
+            categoryButton.heightAnchor.constraint(equalToConstant: 40)
         ])
+    }
+    
+    @objc func categoryButtonTapped() {
+        let controller = CategoriesViewController()
+        present(controller, animated: true)
     }
 }
