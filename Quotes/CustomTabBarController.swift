@@ -15,8 +15,10 @@ final class CustomTabBarController: UITabBarController {
         setupViewControllers()
         customizeTabBarAppearance()
     }
-    
-    private func setupViewControllers() {
+}
+// MARK: - Private Methods
+private extension CustomTabBarController {
+    func setupViewControllers() {
         let vc1 = createNavController(
             image: UIImage(systemName: "bookmark"),
             rootViewController: UIViewController()
@@ -35,7 +37,7 @@ final class CustomTabBarController: UITabBarController {
         viewControllers = [vc1, vc2, vc3]
     }
     
-    private func customizeTabBarAppearance() {
+    func customizeTabBarAppearance() {
         tabBar.backgroundColor = .white
         tabBar.tintColor = .green
         
@@ -48,13 +50,9 @@ final class CustomTabBarController: UITabBarController {
         tabBar.layer.shadowRadius = 4
     }
     
-    private func createNavController(
-        image: UIImage?,
-        rootViewController: UIViewController
-    ) -> UINavigationController {
+    func createNavController(image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.image = image
         return navController
     }
 }
-
