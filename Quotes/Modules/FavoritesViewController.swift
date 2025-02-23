@@ -7,26 +7,20 @@
 
 import UIKit
 
-struct Quote {
-    let text: String
-    let author: String
-    let date: String
-}
+let quotes: [Quote] = [
+    Quote(
+        text: "Life is like riding a bicycle",
+        author: "Albert Einstein",
+        date: "01 Dec 2023-09.15am"
+    ),
+    Quote(
+        text: "Stay hungry, stay foolish",
+        author: "Steve Jobs",
+        date: "02 Dec 2023-03.45pm"
+    )
+]
 
-final class QuotesViewController: UIViewController {
-    private let quotes: [Quote] = [
-        Quote(
-            text: "Life is like riding a bicycle",
-            author: "Albert Einstein",
-            date: "01 Dec 2023-09.15am"
-        ),
-        Quote(
-            text: "Stay hungry, stay foolish",
-            author: "Steve Jobs",
-            date: "02 Dec 2023-03.45pm"
-        )
-    ]
-    
+final class FavoritesViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let itemWidth = UIScreen.main.bounds.width - 50
         let layout = UICollectionViewFlowLayout()
@@ -44,7 +38,6 @@ final class QuotesViewController: UIViewController {
         return collectionView
     }()
     
-    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -53,7 +46,7 @@ final class QuotesViewController: UIViewController {
 }
 
 // MARK: - UICollectionView DataSource & Delegate
-extension QuotesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         quotes.count
     }
@@ -72,7 +65,7 @@ extension QuotesViewController: UICollectionViewDataSource, UICollectionViewDele
 }
 
 // MARK: - Private Methods
-private extension QuotesViewController {
+private extension FavoritesViewController {
     func setupView() {
         view.backgroundColor = .white
         view.addSubview(collectionView)

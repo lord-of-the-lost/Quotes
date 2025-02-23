@@ -21,20 +21,21 @@ private extension CustomTabBarController {
     func setupViewControllers() {
         let vc1 = createNavController(
             image: UIImage(systemName: "bookmark"),
-            rootViewController: UIViewController()
+            rootViewController: FavoritesViewController()
         )
         
         let vc2 = createNavController(
             image: UIImage(systemName: "house"),
-            rootViewController: UIViewController()
+            rootViewController: MainViewController()
         )
         
         let vc3 = createNavController(
             image: UIImage(systemName: "pencil.and.list.clipboard"),
-            rootViewController: UIViewController()
+            rootViewController: FavoritesViewController()
         )
         
         viewControllers = [vc1, vc2, vc3]
+        selectedIndex = 1
     }
     
     func customizeTabBarAppearance() {
@@ -52,6 +53,7 @@ private extension CustomTabBarController {
     
     func createNavController(image: UIImage?, rootViewController: UIViewController) -> UINavigationController {
         let navController = UINavigationController(rootViewController: rootViewController)
+        navController.navigationBar.isHidden = true
         navController.tabBarItem.image = image
         return navController
     }
