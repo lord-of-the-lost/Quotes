@@ -14,6 +14,7 @@
 		60409E412D63B13B005430DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60409E402D63B13B005430DD /* MainViewController.swift */; };
 		60409E462D63B13D005430DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60409E452D63B13D005430DD /* Assets.xcassets */; };
 		60409E492D63B13D005430DD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 60409E482D63B13D005430DD /* Base */; };
+		606D62432D72FFF000004587 /* TASK.md in Resources */ = {isa = PBXBuildFile; fileRef = 606D62422D72FFE400004587 /* TASK.md */; };
 		60E532722D64EB50006CFC38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E532712D64EB50006CFC38 /* NetworkService.swift */; };
 		60E532742D64EB7C006CFC38 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E532732D64EB7C006CFC38 /* QuoteModel.swift */; };
 		60E532762D66526D006CFC38 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E532752D66526D006CFC38 /* CustomTabBarController.swift */; };
@@ -30,6 +31,7 @@
 		60409E452D63B13D005430DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60409E482D63B13D005430DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60409E4A2D63B13D005430DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606D62422D72FFE400004587 /* TASK.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TASK.md; sourceTree = "<group>"; };
 		60E532712D64EB50006CFC38 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		60E532732D64EB7C006CFC38 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		60E532752D66526D006CFC38 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				60409E452D63B13D005430DD /* Assets.xcassets */,
 				60409E472D63B13D005430DD /* LaunchScreen.storyboard */,
 				60409E4A2D63B13D005430DD /* Info.plist */,
+				606D62422D72FFE400004587 /* TASK.md */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606D62432D72FFF000004587 /* TASK.md in Resources */,
 				60409E462D63B13D005430DD /* Assets.xcassets in Resources */,
 				60409E492D63B13D005430DD /* Base in Resources */,
 			);
